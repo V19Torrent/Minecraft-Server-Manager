@@ -1,0 +1,35 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Start Minecraft Server",
+            "type": "shell",
+            "command": "${workspaceFolder}/scripts/start_server.sh",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Stop Minecraft Server",
+            "type": "shell",
+            "command": "${workspaceFolder}/scripts/stop_server.sh",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Restart Minecraft Server",
+            "type": "shell",
+            "command": "${workspaceFolder}/scripts/restart_server.sh",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Update Minecraft Server",
+            "type": "shell",
+            "command": "cd updater; ./updateMC.py",
+            "group": "build",
+            "problemMatcher": []
+        }
+    ]
+  }
