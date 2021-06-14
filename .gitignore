@@ -3,5 +3,6 @@ Server_Files/logs
 Server_Files/screenlog.0
 Server_Files/cache
 Server_Files/.console_history
+Server_Files/usercache.json
 
 password.txt
