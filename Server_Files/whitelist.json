@@ -1,7 +1,15 @@
 [
   {
+    "uuid": "68655b05-4991-4864-8fb3-28eecd88a636",
+    "name": "BleedingCoyote"
+  },
+  {
     "uuid": "1782256e-34a3-4613-9bf3-ef8b73123c7f",
     "name": "relentelsnes"
+  },
+  {
+    "uuid": "7661286c-07e5-4150-b23c-bb13b596a91c",
+    "name": "therealJimlahey"
   },
   {
     "uuid": "5530b4b8-a6c8-422f-b4a5-dbd77f1e27c1",
@@ -22,5 +30,9 @@
   {
     "uuid": "9fff59c9-b5ec-4603-b6f7-518495e2f532",
     "name": "V19Torrent316"
+  },
+  {
+    "uuid": "74a18893-0291-4726-a842-8b42722c66a6",
+    "name": "WoompaDoop"
   }
 ]

@@ -25,6 +25,13 @@
             "problemMatcher": []
         },
         {
+            "label": "Create New World",
+            "type": "shell",
+            "command": "sudo ${workspaceFolder}/scripts/generate_new_world.sh",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
             "label": "Update Minecraft Server",
             "type": "shell",
             "command": "cd updater; ./updateMC.py",
