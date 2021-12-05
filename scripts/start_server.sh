@@ -5,17 +5,24 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
 cd $SCRIPT_DIR/..
 
-echo "Starting Server"
+SCREEN_NUM=$(screen -ls | grep minecraft | cut -d\. -f1)  > /dev/null 2>&1
 
-# Get Password
-PASSWORD=`cat password.txt`
+if [ $SCREEN_NUM ]
+then
+    echo "Server already started"
+else
+    echo "Starting Server"
 
-# Change directories
-cd Server_Files
+    # Get Password
+    PASSWORD=`cat password.txt`
 
-# Create a screen for the server
-screen -dmSL minecraft
-# Run the server
-screen -S minecraft -X stuff "./run.sh\r"
-sleep 0.5
-screen -S minecraft -X stuff "$PASSWORD\r"
+    # Change directories
+    cd Server_Files
+
+    # Create a screen for the server
+    screen -dmSL minecraft
+    # Run the server
+    screen -S minecraft -X stuff "./run.sh\r"
+    sleep 0.5
+    screen -S minecraft -X stuff "$PASSWORD\r"
+fi

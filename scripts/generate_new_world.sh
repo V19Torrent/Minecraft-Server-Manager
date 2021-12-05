@@ -2,7 +2,7 @@
 export SCREENDIR=$HOME/.screen
 
 # We don't care to save the world
-pkill screen
+screen -S minecraft -X quit
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 

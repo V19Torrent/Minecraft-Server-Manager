@@ -18,7 +18,7 @@ else
     sleep 10
 
     # Kill the screen
-    pkill screen
+    screen -S minecraft -X quit
 fi
 
 rm Server_Files/screenlog.*
