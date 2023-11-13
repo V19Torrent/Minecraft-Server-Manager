@@ -1,0 +1,17 @@
+# Use a base image, such as Ubuntu
+FROM ubuntu:22.04
+
+WORKDIR /opt/buildDir
+
+# Install pre-requisites
+RUN apt-get update -y && \
+    apt-get install -y \
+    git \
+    wget \
+    openjdk-19-jre-headless
+
+RUN apt install git wget openjdk-19-jre-headless -y
+
+CMD wget -O BuildTools.jar https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar && \
+    java -jar BuildTools.jar --rev latest && \
+    cp spigot-*.jar /opt/output/server.jar
