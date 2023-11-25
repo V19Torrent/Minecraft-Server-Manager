@@ -10,6 +10,6 @@ RUN apt-get update -y && \
     wget \
     openjdk-19-jre-headless
 
-CMD wget -O BuildTools.jar https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar && \
-    java -jar BuildTools.jar --rev latest && \
-    cp spigot-*.jar /opt/output/server.jar
+COPY --chown=root:root docker_script.sh .
+
+CMD ./docker_script.sh $VERSION
